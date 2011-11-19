@@ -1,6 +1,6 @@
-	<?php
-		function correct_encoding($text) {
-    		$current_encoding = mb_detect_encoding($text, 'auto');
+<?php
+	function correct_encoding($text) {
+  		$current_encoding = mb_detect_encoding($text, 'auto');
     		print($current_encoding);
     		$text = iconv($current_encoding, 'UTF-8', $text);
     		return $text;
@@ -471,8 +471,8 @@
 	<html>
 
 	<head>
-	<title>Alrekry - Työnhakulomake</title>
-	<meta name="description" content=" Alrekry ">
+	<title>Lomake</title>
+	<meta name="description" content="Lomakkeiden hyväksyntä">
 	<meta name="keywords" content=" ">
 	<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 -->
@@ -2807,31 +2807,13 @@
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal">
-				<!--<input value="Lisää hakemus" type="submit">
-				<input value="Poista hakemus" type="reset"> </td>
--->
 			</tr>
 		</tbody>
 	</table>
 	</form>
 	</div>
 
-<!--
-	<div id="print_footer">
-	</div>
-	<div id="footer">
-	<p><strong>Alrekry Oy</strong><br>Talvikkitie 40 A<br>01300 Vantaa<br><br>puh. (09) 8514 466<br><a href="mailto:alrekry@alrekry.fi">alrekry@alrekry.fi</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	</p>
-	<p>&nbsp;</p>
-	<p></p>
-
-	</div>
-
-	</div>
--->
 	</body>
 
 	</html>';
-
-
-	?>
+?>
