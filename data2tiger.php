@@ -69,7 +69,9 @@ if(isset($_POST['add'])) {
 			'cf_540'=>r($osoite),
 			'cf_541'=>r($_POST['AMMATTI___________']),
 			'productcategory'=>r($_POST['ala']),
-			'description'=>r($_POST['full_form'])
+			'description'=>r($_POST['full_form']),
+			'cf_542'=>r($_POST['ERITYISTAIDOT']),
+			'cf_543'=>r($_POST['HUOMIOT'])
 			);
     $objectJson = Zend_JSON::encode($contactData);
     $moduleName = 'Products';

@@ -507,7 +507,7 @@
 		    Huomioitavaa:&nbsp;
 		</td>
 		<td>
-		    <TEXTAREA>(Ei vielä tee mitään)</TEXTAREA>
+		    <TEXTAREA name="HUOMIOT">(Ei vielä tee mitään)</TEXTAREA>
 		</td>
 	    </tr>
 	    <tr>
