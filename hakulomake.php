@@ -533,7 +533,7 @@
 <tr>
     <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal"
         >
-        <h3>Ty�historia</h3>(viimeisimmästä alkaen):
+        <h3>Työhistoria</h3>(viimeisimmästä alkaen):
     </td>
 </tr>
 <tr>
@@ -1040,7 +1040,7 @@
             </option>
             <option value="heikko">heikko</option>
             <option value="valttava">välttävä</option>
-            <option value="tyydyttava">tyydyttäv�</option>
+            <option value="tyydyttava">tyydyttävä</option>
             <option value="hyva">hyvä</option>
             <option value="erinomainen">erinomainen</option>
             <option value="aidinkieli">äidinkieli</option>
@@ -1263,7 +1263,7 @@
 </tr>
 <tr>
     <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal"
-><input name="TIEDOT_SAA_ANTAA" value="Kylla" type="radio">Kyll�, tietoni saa antaa asiakasyritykselle
+><input name="TIEDOT_SAA_ANTAA" value="Kylla" type="radio">Kyllä, tietoni saa antaa asiakasyritykselle
     <br>
     <input name="TIEDOT_SAA_ANTAA" value="Ei" type="radio">Tietojani ei saa antaa asiakasyritykselle
     </td>
