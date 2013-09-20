@@ -5,7 +5,7 @@
     <title>Alrekry - Työnhakulomake</title>
     <meta name="description" content=" Alrekry ">
     <meta name="keywords" content=" ">
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="stylesheet" type="text/css" href="css_kuvat/styles.css">
     <link rel="stylesheet" type="text/css" href="css_kuvat/print.css" media="print">
     <link rel="stylesheet" type="text/css" href="css_kuvat/niftyCorners.css">
