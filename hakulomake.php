@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Alrekry - Työnhakulomake</title>
+<title>Alrekry - Tyï¿œnhakulomake</title>
 <meta name="description" content=" Alrekry ">
 <meta name="keywords" content=" ">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
@@ -25,7 +25,7 @@ Rounded("div#feed h2","all","#fff","transparent","small");
 
 function FValidateControl(control) {
   if (control.value=="") {
-    alert(control.name+": Tämä kenttä on pakollinen.")
+    alert(control.name+": Tï¿œmï¿œ kenttï¿œ on pakollinen.")
     control.focus()
     return false }
   return true }
@@ -57,8 +57,8 @@ if (!FValidateControl(form.PAIKKA_JA_AIKA)) return false
 <ul class="navi1">
 <li><a href="index.php">Alrekry</a>
 </li><li><a href="yrityksille.php">Yrityksille</a>
-</li><li class="active"><a class="active" href="tyonhakijoille.php">Työnhakijoille</a>
-</li><li><a href="avoimet_tyopaikat.php">Avoimet työpaikat</a>
+</li><li class="active"><a class="active" href="tyonhakijoille.php">Tyï¿œnhakijoille</a>
+</li><li><a href="avoimet_tyopaikat.php">Avoimet tyï¿œpaikat</a>
 </li><li><a href="yhteystiedot.php">Yhteystiedot</a>
 </li></ul>
 
@@ -72,15 +72,15 @@ if (!FValidateControl(form.PAIKKA_JA_AIKA)) return false
 <div id="feed">
 
 
-<img src="css_kuvat/getOutput.gif" alt="täytä työnhakulomake" border="0" height="30" hspace="0" vspace="0" width="245">
+<img src="css_kuvat/getOutput.gif" alt="tï¿œytï¿œ tyï¿œnhakulomake" border="0" height="30" hspace="0" vspace="0" width="245">
 </div>
 
 <div id="content">
-<h1>Työnhakulomake</h1>
-<p class="kappale">Täytäthän lomakkeen tiedot mahdollisimman huolellisesti - 
-näin löydämme juuri Sinulle sopivimman työn !</p>
-<p class="kappale">Voit toki myös soittaa ja pyytää haastatteluaikaa.</p>
-<p class="kappale">Huomaa että (*) tähdellä merkityt kentät ovat pakollisia.</p>
+<h1>Tyï¿œnhakulomake</h1>
+<p class="kappale">Tï¿œytï¿œthï¿œn lomakkeen tiedot mahdollisimman huolellisesti - 
+nï¿œin lï¿œydï¿œmme juuri Sinulle sopivimman tyï¿œn !</p>
+<p class="kappale">Voit toki myï¿œs soittaa ja pyytï¿œï¿œ haastatteluaikaa.</p>
+<p class="kappale">Huomaa ettï¿œ (*) tï¿œhdellï¿œ merkityt kentï¿œt ovat pakollisia.</p>
 </div>
 
 <div id="content" style="position: relative; left: 275; right: 0">
@@ -94,7 +94,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 		<tbody>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal">
-				<h3>Henkilötiedot</h3></td>
+				<h3>Henkilï¿œtiedot</h3></td>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal">
@@ -139,7 +139,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Syntymävuosi * &nbsp;&nbsp;</td>
+                 >Syntymï¿œvuosi * &nbsp;&nbsp;</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="SYNTYMAVUOSI______" maxlength="4" size="56" 
            ></td>
@@ -154,24 +154,24 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 				<input name="SUKUPUOLI" value="mies" type="radio"> Mies &nbsp;&nbsp;
 				</td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-           ><b>Siviilisääty</b><br>
+           ><b>Siviilisï¿œï¿œty</b><br>
 				<input name="SIVIILISAATY" value="naimaton" type="radio"> 
 				Naimaton<input name="SIVIILISAATY" value="avoliitossa" type="radio"> 
 				Avoliitossa<input name="SIVIILISAATY" value="avioliitossa" type="radio">&nbsp; Avioliitossa&nbsp;
-				<br>
-				Lasten lkm <input name="LASTEN_LKM" maxlength="2" size="11" > Lasten iät&nbsp;&nbsp;
-				<input name="LASTEN_IAT" maxlength="12" size="11" > </td>
-			</tr>
-			<tr>
+				<br>--><input type="hidden" name="SIVILISAATY" value=" ">
+				<!--Lasten lkm <input name="LASTEN_LKM" maxlength="2" size="11" > Lasten iï¿œt&nbsp;&nbsp;
+				<input name="LASTEN_IAT" maxlength="12" size="11" > </td>--><input type="hidden" name="LASTEN_LKM" value=" ">
+			<!--</tr>-->
+			<!--<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            ><b>Asepalvelus</b><br>
 				<input name="ASEPAL" value="suorittamatta" type="radio"> 
 				suorittamatta
-				<input name="ASEPAL" value="suoritettu" type="radio"> suoritettu<input name="ASEPAL" value="siviilipalvelus" type="radio"> siviilipalvelus &nbsp;&nbsp;&nbsp;<br>
-		Sotilasarvo <input name="SOTILASARVO" maxlength="30" size="63" > </td>
-			</tr>
+				<input name="ASEPAL" value="suoritettu" type="radio"> suoritettu<input name="ASEPAL" value="siviilipalvelus" type="radio"> siviilipalvelus &nbsp;&nbsp;&nbsp;<br>--> <input type="hidden" name="ASEPAL" value=" ">
+		<!--Sotilasarvo <input name="SOTILASARVO" maxlength="30" size="63" > </td>--> <input type="hidden" name="SOTILASARVO" value=" ">
+			<!--</tr>-->
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            >
@@ -179,7 +179,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 					<tbody>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Sähköpostiosoite</td>
+                 >Sï¿œhkï¿œpostiosoite</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="EMAIL" maxlength="35" size="20" ></td>
 						</tr>
@@ -188,10 +188,10 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
                  >Puhelin</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="PUHELIN" maxlength="25" >&nbsp;&nbsp;</td>
-							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
+							<!--<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal"
                  >Matkapuhelin</td>
-							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 ><input name="MATKAPUHELIN" maxlength="25" size="18" >&nbsp;&nbsp;</td>
+							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal"
+                 ><input name="MATKAPUHELIN" maxlength="25" size="18" >&nbsp;&nbsp;</td>--><input type="hidden" name="MATKAPUHELIN" value=" ">
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" valign="top" 
@@ -219,20 +219,20 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 				<input name="AJOKORTTI_MUUTA" maxlength="10" size="15" 
      >&nbsp;&nbsp;&nbsp;&nbsp;
 		<br>
-				Oma auto käytettävissä, 
+				Oma auto kï¿œytettï¿œvissï¿œ, 
 
-		<input name="AUTO" value="on" type="radio"> kyllä &nbsp;&nbsp;
+		<input name="AUTO" value="on" type="radio"> kyllï¿œ &nbsp;&nbsp;
 				<input name="AUTO" value="ei" type="radio"> ei &nbsp;&nbsp;
 
 
 		<br></td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-           ><b>Työmatkan pituus ja kesto enintään</b>
+           ><b>Tyï¿œmatkan pituus ja kesto enintï¿œï¿œn</b>
 				<input name="TYOMATKA" maxlength="3" size="4" > km &nbsp;&nbsp;&nbsp;&nbsp;
 				<input name="MATKAAIKA" maxlength="3" size="4" > min <br></td>
-			</tr>
+			</tr>--> <input type="hidden" name="TYOAIKA" value=" "><input type="hidden" name="MATKAAIKA" value=" ">
 			<tr>
 				<td></td>
 			</tr>
@@ -241,7 +241,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal">
-				<h3>Työkokemus</h3></td>
+				<h3>Tyï¿œkokemus</h3></td>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
@@ -250,7 +250,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 					<tbody>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Ei työkokemusta</td>
+                 >Ei tyï¿œkokemusta</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="EI_TYOKOKEMUSTA" value="X" type="checkbox">&nbsp;&nbsp;&nbsp;</td>
 						</tr>
@@ -260,7 +260,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="ASIAKASPALVELU" value="X" type="checkbox">&nbsp;&nbsp;&nbsp;</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Varastotyö</td>
+                 >Varastotyï¿œ</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="VARASTOTYO" value="X" type="checkbox">&nbsp;&nbsp;&nbsp;</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
@@ -274,7 +274,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="HOTELLI_RAVINTOLA" value="X" type="checkbox">&nbsp;&nbsp;&nbsp;</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Huoltoyhtiöt</td>
+                 >Huoltoyhtiï¿œt</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="HUOLTOYHTIOT" value="X" type="checkbox">&nbsp;&nbsp;&nbsp;</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
@@ -284,7 +284,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Toimistotyö</td>
+                 >Toimistotyï¿œ</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TOIMISTO" value="X" type="checkbox">&nbsp;&nbsp;&nbsp;</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
@@ -326,7 +326,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Muuttotyö</td>
+                 >Muuttotyï¿œ</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="MUUTTOTYO" value="X" type="checkbox">&nbsp;&nbsp;&nbsp;</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
@@ -360,21 +360,21 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            >
-				<h3>Toivomukseni työstä</h3></td>
+				<h3>Toivomukseni tyï¿œstï¿œ</h3></td>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            ><b>Etsin</b>&nbsp;&nbsp;&nbsp;&nbsp; 
-				<input name="TILAPAISTA" value="X" type="checkbox"> tilapäistä &nbsp;&nbsp;&nbsp;
+				<input name="TILAPAISTA" value="X" type="checkbox"> tilapï¿œistï¿œ &nbsp;&nbsp;&nbsp;
 				<input name="VAKITUISTA" value="X" type="checkbox"> vakituista &nbsp;&nbsp;&nbsp;
 				<input name="KOKOPAIVAISTA" value="X" type="checkbox"> 
-				kokopäiväistä
-				<input name="OSAAIKAISTA" value="X" type="checkbox"> osa-aikaista työtä
+				kokopï¿œivï¿œistï¿œ
+				<input name="OSAAIKAISTA" value="X" type="checkbox"> osa-aikaista tyï¿œtï¿œ
 				</td>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-           ><b>Etsin työtä ajalle</b> <br>
+           ><b>Etsin tyï¿œtï¿œ ajalle</b> <br>
 				<input name="TYOTA_AJALLE______" maxlength="45" size="45" >&nbsp;&nbsp;&nbsp;&nbsp;
 				<br>
 				Palkkatoivomus&nbsp;&nbsp; 
@@ -383,10 +383,10 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-           ><b>Haen avoinna olevaa tehtävää</b> <br>
+           ><b>Haen avoinna olevaa tehtï¿œvï¿œï¿œ</b> <br>
 				<input name="HAEN_TEHTAVAA______" maxlength="45" size="45" 
-     > <br><input name="MUUKIN_TYO_KAY" value="" type="radio"> haen vain tätä työtä &nbsp;&nbsp;&nbsp;
-				<input name="MUUKIN_TYO_KAY" value="X" type="radio"> myös muut työt käyvät
+     > <br><input name="MUUKIN_TYO_KAY" value="" type="radio"> haen vain tï¿œtï¿œ tyï¿œtï¿œ &nbsp;&nbsp;&nbsp;
+				<input name="MUUKIN_TYO_KAY" value="X" type="radio"> myï¿œs muut tyï¿œt kï¿œyvï¿œt
 				</td>
 			</tr>
 			<tr>
@@ -396,28 +396,28 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 					<tbody>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 ><b>Toivomukseni&nbsp;työajasta</b> </td>
+                 ><b>Toivomukseni&nbsp;tyï¿œajasta</b> </td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="AAMULLA" value="X" type="checkbox"> aamulla &nbsp;&nbsp;&nbsp;
 							</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 ><input name="PAIVALLA" value="X" type="checkbox"> päivällä &nbsp;&nbsp;&nbsp;
+                 ><input name="PAIVALLA" value="X" type="checkbox"> pï¿œivï¿œllï¿œ &nbsp;&nbsp;&nbsp;
 							</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="ILLALLA" value="X" type="checkbox"> illalla &nbsp;&nbsp;&nbsp;
 							</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" width="193" 
-                 ><input name="KAIKKI_AJAT" value="X" type="checkbox"> kaikki ajat käyvät &nbsp;&nbsp;&nbsp;
+                 ><input name="KAIKKI_AJAT" value="X" type="checkbox"> kaikki ajat kï¿œyvï¿œt &nbsp;&nbsp;&nbsp;
 							</td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 ><input name="VUOROTYO" value="X" type="checkbox"> vuorotyö &nbsp;&nbsp;&nbsp;
+                 ><input name="VUOROTYO" value="X" type="checkbox"> vuorotyï¿œ &nbsp;&nbsp;&nbsp;
 							</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 ><input name="ARKISIN" value="X" type="checkbox"> vain arkipäivisin&nbsp;&nbsp;&nbsp;
+                 ><input name="ARKISIN" value="X" type="checkbox"> vain arkipï¿œivisin&nbsp;&nbsp;&nbsp;
 							</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="VIIKONLOPPUISIN" value="X" type="checkbox"> vain viikonloppuisin&nbsp;&nbsp;&nbsp;
@@ -437,14 +437,14 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 					<tbody>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 ><b>Voin aloittaa työn</b> </td>
+                 ><b>Voin aloittaa tyï¿œn</b> </td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 ><input name="VOIN_ALOITTAA_____" value="samana" type="checkbox"> samana päivänä&nbsp;&nbsp;
+                 ><input name="VOIN_ALOITTAA_____" value="samana" type="checkbox"> samana pï¿œivï¿œnï¿œ&nbsp;&nbsp;
 							</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 ><input name="VOIN_ALOITTAA" value="seuraavana" type="checkbox"> seuraavana päivänä &nbsp;&nbsp;
+                 ><input name="VOIN_ALOITTAA" value="seuraavana" type="checkbox"> seuraavana pï¿œivï¿œnï¿œ &nbsp;&nbsp;
 							</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" width="201" 
                  ><!--					<input type="checkbox" name="VOIN_ALOITTAA" value="muulloin"> -->
@@ -455,11 +455,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 					</tbody>
 				</table></td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            ><b>Sairaudet ja allergiat</b> <br>
 				<input name="SAIRAUDET" maxlength="95" size="73" > </td>
-			</tr>
+			</tr>--><input type="hidden" name="SAIRAUDET" value=" ">
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            ><b>Harrastukset ym.</b> <br>
@@ -479,7 +479,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            >
-				<h3>Työhistoria</h3>(viimeisimmästä alkaen):</td>
+				<h3>Tyï¿œhistoria</h3>(viimeisimmï¿œstï¿œ alkaen):</td>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
@@ -488,28 +488,28 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 					<tbody>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työnantaja *</td>
+                 >Tyï¿œnantaja *</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TYONANTAJA1_______" maxlength="40" size="40" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Tehtävänimike</td>
+                 >Tehtï¿œvï¿œnimike</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TEHTAVANIMIKE1____" maxlength="40" size="40" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työtehtävät</td>
+                 >Tyï¿œtehtï¿œvï¿œt</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TYOTEHTAVAT1______" maxlength="75" size="56" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työsuhde alkoi </td>
+                 >Tyï¿œsuhde alkoi </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TS1_ALKOI_PV" maxlength="2" size="3" > pv&nbsp;&nbsp;&nbsp;
 							<input name="TS1_ALKOI_KK______" maxlength="2" size="3" 
@@ -519,7 +519,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työsuhde päättyi </td>
+                 >Tyï¿œsuhde pï¿œï¿œttyi </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TS1_PAATTYI_PV" maxlength="2" size="3" > pv&nbsp;&nbsp;&nbsp;
 							<input name="TS1_PAATTYI_KK____" maxlength="2" size="3" 
@@ -541,28 +541,28 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 					<tbody>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työnantaja</td>
+                 >Tyï¿œnantaja</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TYONANTAJA2______" maxlength="40" size="40" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Tehtävänimike</td>
+                 >Tehtï¿œvï¿œnimike</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TEHTAVANIMIKE2____" maxlength="40" size="40" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työtehtävät</td>
+                 >Tyï¿œtehtï¿œvï¿œt</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TYOTEHTAVAT2______" maxlength="75" size="56" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työsuhde alkoi </td>
+                 >Tyï¿œsuhde alkoi </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TS2_ALKOI_PV" maxlength="2" size="3" > pv&nbsp;&nbsp;&nbsp;
 							<input name="TS2_ALKOI_KK______" maxlength="2" size="3" 
@@ -572,7 +572,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työsuhde päättyi </td>
+                 >Tyï¿œsuhde pï¿œï¿œttyi </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TS2_PAATTYI_PV" maxlength="2" size="3" > pv&nbsp;&nbsp;&nbsp;
 							<input name="TS2_PAATTYI_KK____" maxlength="2" size="3" 
@@ -594,28 +594,28 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 					<tbody>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työnantaja</td>
+                 >Tyï¿œnantaja</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TYONANTAJA3_______" maxlength="40" size="40" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Tehtävänimike</td>
+                 >Tehtï¿œvï¿œnimike</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TEHTAVANIMIKE3____" maxlength="40" size="40" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työtehtävät</td>
+                 >Tyï¿œtehtï¿œvï¿œt</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TYOTEHTAVAT3______" maxlength="75" size="56" 
            ></td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työsuhde alkoi </td>
+                 >Tyï¿œsuhde alkoi </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TS3_ALKOI_PV" maxlength="2" size="3" > pv&nbsp;&nbsp;&nbsp;
 							<input name="TS3_ALKOI_KK______" maxlength="2" size="3" 
@@ -625,7 +625,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Työsuhde päättyi </td>
+                 >Tyï¿œsuhde pï¿œï¿œttyi </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="TS3_PAATTYI_PV" maxlength="2" size="3" > pv&nbsp;&nbsp;&nbsp;
 							<input name="TS3_PAATTYI_KK____" maxlength="2" size="3" 
@@ -642,7 +642,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-           ><b>Muu työhistoria</b><br>
+           ><b>Muu tyï¿œhistoria</b><br>
 				<TEXTAREA name=MUU_TYOHISTORIA___ rows=5 cols=53> </TEXTAREA>
 				</td>
 			</tr>
@@ -719,7 +719,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Pääaine</td>
+                 >Pï¿œï¿œaine</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="PAAAINE1" maxlength="40" size="40" ></td>
 						</tr>
@@ -789,7 +789,7 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Pääaine</td>
+                 >Pï¿œï¿œaine</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="PAAAINE2" maxlength="40" size="40" ></td>
 						</tr>
@@ -853,13 +853,13 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="ALOITUSVUOSI3_____" maxlength="4" size="4" 
            > Lopetusvuosi
-							<input name="LOPETUSVUOSI3_____" maxlength="4" size="4" > &nbsp;pintoviikkoja
+							<input name="LOPETUSVUOSI3_____" maxlength="4" size="4" > &nbsp;opintoviikkoja
 							<input name="OPINTOVIIKKOJA3" maxlength="3" size="3" 
            > </td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Pääaine</td>
+                 >Pï¿œï¿œaine</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><input name="PAAAINE3" maxlength="40" size="40" ></td>
 						</tr>
@@ -905,11 +905,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><select name="SUOMI_KIRJ" style="FONT: 10px Verdana,Arial,Helvetica; WIDTH: 90px; HEIGHT: 18px; font-size-adjust: none; font-stretch: normal" 
@@ -917,11 +917,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 						</tr>
 						<tr>
@@ -933,11 +933,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><select name="RUOTSI_KIRJ" style="FONT: 10px Verdana,Arial,Helvetica; WIDTH: 90px; HEIGHT: 18px; font-size-adjust: none; font-stretch: normal" 
@@ -945,11 +945,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 						</tr>
 						<tr>
@@ -961,11 +961,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><select name="ENGLANTI_KIRJ" style="FONT: 10px Verdana,Arial,Helvetica; WIDTH: 90px; HEIGHT: 18px; font-size-adjust: none; font-stretch: normal" 
@@ -973,11 +973,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 						</tr>
 						<tr>
@@ -989,11 +989,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><select name="SAKSA_KIRJ" style="FONT: 10px Verdana,Arial,Helvetica; WIDTH: 90px; HEIGHT: 18px; font-size-adjust: none; font-stretch: normal" 
@@ -1001,27 +1001,27 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 						</tr>
 						<tr>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-                 >Venäjä</td>
+                 >Venï¿œjï¿œ</td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><select name="VENAJA_SUUL" style="FONT: 10px Verdana,Arial,Helvetica; WIDTH: 90px; HEIGHT: 18px; font-size-adjust: none; font-stretch: normal" 
                    >
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><select name="VENAJA_KIRJ" style="FONT: 10px Verdana,Arial,Helvetica; WIDTH: 90px; HEIGHT: 18px; font-size-adjust: none; font-stretch: normal" 
@@ -1029,11 +1029,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 						</tr>
 						<tr>
@@ -1045,11 +1045,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><select name="RANSKA_KIRJ" style="FONT: 10px Verdana,Arial,Helvetica; WIDTH: 90px; HEIGHT: 18px; font-size-adjust: none; font-stretch: normal" 
@@ -1057,11 +1057,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 						</tr>
 						<tr>
@@ -1073,11 +1073,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  ><select name="MUU_KIRJ" style="FONT: 10px Verdana,Arial,Helvetica; WIDTH: 90px; HEIGHT: 18px; font-size-adjust: none; font-stretch: normal" 
@@ -1085,11 +1085,11 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 							<option value="-" selected 
              >-</option>
 							<option value="heikko">heikko</option>
-							<option value="valttava">välttävä</option>
-							<option value="tyydyttava">tyydyttävä</option>
-							<option value="hyva">hyvä</option>
+							<option value="valttava">vï¿œlttï¿œvï¿œ</option>
+							<option value="tyydyttava">tyydyttï¿œvï¿œ</option>
+							<option value="hyva">hyvï¿œ</option>
 							<option value="erinomainen">erinomainen</option>
-							<option value="aidinkieli">äidinkieli</option>
+							<option value="aidinkieli">ï¿œidinkieli</option>
 							</select> </td>
 							<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
                  >&nbsp; kieli 
@@ -1104,13 +1104,13 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-           ><b>Mitkä työt kiinnostavat?</b><br>
+           ><b>Mitkï¿œ tyï¿œt kiinnostavat?</b><br>
 				<input name="KIINNOSTAA________" maxlength="100" size="70" >
 				</td>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-           ><b>Mitä töitä en mielelläni ota vastaan</b> <br>
+           ><b>Mitï¿œ tï¿œitï¿œ en mielellï¿œni ota vastaan</b> <br>
 				<input name="EI_KIINNOSTA______" maxlength="100" size="70" 
      > </td>
 			</tr>
@@ -1120,18 +1120,18 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 				<TEXTAREA name=MUUTA_____________ rows=5 cols=54> </TEXTAREA>
 				</td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            ><b>Valintatilanteessa hakemustietoni saa antaa asiakasyritykselle.</b>
 				</td>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
-           ><input name="TIEDOT_SAA_ANTAA" value="Kylla" type="radio">Kyllä, tietoni saa antaa asiakasyritykselle
+           ><input name="TIEDOT_SAA_ANTAA" value="Kylla" type="radio">Kyllï¿œ, tietoni saa antaa asiakasyritykselle
 				<br>
 				<input name="TIEDOT_SAA_ANTAA" value="Ei" type="radio">Tietojani ei saa antaa asiakasyritykselle
 				</td>
-			</tr>
+			</tr>--><input type="hidden" name="TIEDOT_SAA_ANTAA" value=" ">
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal" 
            ></td>
@@ -1143,8 +1143,8 @@ näin löydämme juuri Sinulle sopivimman työn !</p>
 			</tr>
 			<tr>
 				<td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal">
-				<input value="Lähetä" type="submit">
-				<input value="Tyhjennä" type="reset"> </td>
+				<input value="Lï¿œhetï¿œ" type="submit">
+				<input value="Tyhjennï¿œ" type="reset"> </td>
 			</tr>
 		</tbody>
 	</table>
