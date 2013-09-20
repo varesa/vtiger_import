@@ -111,7 +111,7 @@
 <tbody>
 <tr>
     <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal">
-        <h3>Henkil�tiedot</h3></td>
+        <h3>Henkilötiedot</h3></td>
 </tr>
 <tr>
     <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal">
@@ -178,12 +178,12 @@
 </tr>
 <!--<tr>
     <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal"
-><b>Siviilis��ty</b><br>
+><b>Siviilisääty</b><br>
     <input name="SIVIILISAATY" value="naimaton" type="radio">
     Naimaton<input name="SIVIILISAATY" value="avoliitossa" type="radio">
     Avoliitossa<input name="SIVIILISAATY" value="avioliitossa" type="radio">&nbsp; Avioliitossa&nbsp;
     <br>--><input type="hidden" name="SIVILISAATY" value=" ">
-<!--Lasten lkm <input name="LASTEN_LKM" maxlength="2" size="11" > Lasten i�t&nbsp;&nbsp;
+<!--Lasten lkm <input name="LASTEN_LKM" maxlength="2" size="11" > Lasten iät&nbsp;&nbsp;
 <input name="LASTEN_IAT" maxlength="12" size="11" > </td>--><input type="hidden" name="LASTEN_LKM"
                                                                                    value=" ">
 <!--</tr>-->
@@ -253,7 +253,7 @@
         <br>
         Oma auto käytettävissä,
 
-        <input name="AUTO" value="on" type="radio"> kyll� &nbsp;&nbsp;
+        <input name="AUTO" value="on" type="radio"> kyllä &nbsp;&nbsp;
         <input name="AUTO" value="ei" type="radio"> ei &nbsp;&nbsp;
 
 
@@ -261,7 +261,7 @@
 </tr>
 <!--<tr>
     <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal"
-><b>Ty�matkan pituus ja kesto enint��n</b>
+><b>Työmatkan pituus ja kesto enintään</b>
     <input name="TYOMATKA" maxlength="3" size="4" > km &nbsp;&nbsp;&nbsp;&nbsp;
     <input name="MATKAAIKA" maxlength="3" size="4" > min <br></td>
 </tr>--> <input type="hidden" name="TYOAIKA" value=" "><input type="hidden" name="MATKAAIKA" value=" ">
@@ -1279,8 +1279,8 @@
 </tr>
 <tr>
     <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal">
-        <input value="L�het�" type="submit">
-        <input value="Tyhjenn�" type="reset"></td>
+        <input value="Lähetä" type="submit">
+        <input value="Tyhjennä" type="reset"></td>
 </tr>
 </tbody>
 </table>
