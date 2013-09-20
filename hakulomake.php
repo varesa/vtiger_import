@@ -208,8 +208,8 @@
                 </td>
                 <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal"
                     ><input name="EMAIL" maxlength="35" size="20"></td>
-            </tr>
-            <tr>
+            <!--</tr>
+            <tr>-->
                 <td style="FONT: 10px Verdana; font-size-adjust: none; font-stretch: normal"
                     >Puhelin
                 </td>
