@@ -22,6 +22,11 @@
 	list($blah,$enc) = split("charset=", $info, 2);
 	
 	exec("iconv -f $enc -t utf-8 $full_filename 2>&1",$lomake);
+	if(substr(implode($lomake,""), 0, 5) == "iconv") {
+	    print("Huom: Sähköpostin merkistöä ei voitu tunnistaa<br><br>");
+	    $lomake = file("$full_filename");
+	    print_r($lomake);
+	}
 	
 	//echo $blah . " X ";
 	//echo $enc;
@@ -43,7 +48,7 @@
 	    print('<br>Sähköpostin rajattu sisältö:<br>');
 
 	    
-	    print(str_replace("<","&lt;", str_replace(">","&gt;", str_replace("\"", "''", implode($lines, "<br>\n")))));
+	    print(str_replace("\n", "<br>\n", str_replace("<","&lt;", str_replace(">","&gt;", str_replace("\"", "''", implode($lines, "\n"))))));
 	    print("</body></html>");
 	    
 	    die();
