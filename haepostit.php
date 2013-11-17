@@ -8,7 +8,7 @@
 	<?php
 	    exec('fetchmail -f /var/www/scripts/.fetchmailrc --pidfile /var/www/scripts/fetchmail.pid 2>&1',$pal);
 	    print_r($pal);
-	    print("Voit nyt sulkea tämän sivun, ja jatkaa.");
+	    print('<br><br><form method="post" action="index.php"> <input type="submit" value="Jatka"></form>');
 	?>
 	
 	</pre>
