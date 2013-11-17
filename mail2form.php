@@ -13,6 +13,16 @@
 	$full_filename = $path.$file; 
 	$full_filename = trim($full_filename);
 	
+	if(substr($full_filename, -1) == "/") {
+	    print("<html><head><title>Lomake</title></head><body>
+	    <h1>Käsiteltäviä lomakkeita ei ole</h1>
+	    <form method=\"post\" action=\"index.php\">
+	    <input type=\"submit\" value=\"Palaa takaisin.\">
+	    </form>
+	    </body></html>");
+	    die();
+	}
+	
 	//echo $path . "<br>" . $file . "<br>" . $full_filename . "<br>";
 	
 	//echo $full_filename;
@@ -520,7 +530,7 @@
 	<body>
 	
 	<form action="data2tiger.php" method="post">
-	
+	<input type="hidden" name="fname" value="' . $full_filename . '">
 	<input type="hidden" name="full_form" value="' . implode($lines,"\n") . '">
 	<div style="border-style: solid; border-width: 1px; width: 600px; background-color: #ccffcc">
 	
