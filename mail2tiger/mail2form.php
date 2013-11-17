@@ -504,10 +504,10 @@
 	<table>
 	    <tr>
 		<td>
-		    Huomioitavaa:&nbsp;
+		   Tallentajan huomiot:&nbsp;
 		</td>
 		<td>
-		    <TEXTAREA name="HUOMIOT">(Ei vielä tee mitään)</TEXTAREA>
+		    <TEXTAREA name="HUOMIOT"></TEXTAREA>
 		</td>
 	    </tr>
 	    <tr>

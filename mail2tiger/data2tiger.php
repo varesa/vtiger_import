@@ -20,7 +20,7 @@ if(isset($_POST['add'])) {
     include('HTTP/Client.php');
     include('Zend/Json.php');
 
-    $endpointUrl = "http://f12.ikioma/vtigerCRM/webservice.php";
+    $endpointUrl = "http://vtiger.intra/vtigerCRM/webservice.php";
     $userName="admin";
     $userAccessKey = 'QrVFFXtdhgHEQFI';
 
@@ -71,20 +71,21 @@ if(isset($_POST['add'])) {
 			'productcategory'=>r($_POST['ala']),
 			'description'=>r($_POST['full_form']),
 			'cf_542'=>r($_POST['ERITYISTAIDOT']),
-			'cf_543'=>r($_POST['HUOMIOT'])
+			'cf_543'=>r($_POST['HUOMIOT']),
+			'assigned_user_id'=>'18x1' // ModuleID x UserID "'Users'x'admin'"
 			);
     $objectJson = Zend_JSON::encode($contactData);
     $moduleName = 'Products';
 
     $params = array("sessionName"=>$sessionId, "operation"=>'create', 
 		    "element"=>$objectJson, "elementType"=>$moduleName);
-    print_r($params);
+//    print_r($params);
     $httpc->post("$endpointUrl", $params, true);
     $response = $httpc->currentResponse();
     $jsonResponse = Zend_JSON::decode($response['body']);
 
     if($jsonResponse['success']==false)
-	die('create failed:'.$jsonResponse['error']['errorMsg']);
+	die('create failed: '.$jsonResponse['error']['message']);
     $savedObject = $jsonResponse['result']; 
     $id = $savedObject['id'];
 

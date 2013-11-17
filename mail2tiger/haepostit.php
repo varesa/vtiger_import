@@ -6,7 +6,7 @@
 	
 	
 	<?php
-	    exec('fetchmail -f /var/www/scripts/.fetchmailrc 2>&1',$pal);
+	    exec('fetchmail -f /var/www/scripts/.fetchmailrc --pidfile /var/www/scripts/fetchmail.pid 2>&1',$pal);
 	    print_r($pal);
 	    print("Voit nyt sulkea tämän sivun, ja jatkaa.");
 	?>
