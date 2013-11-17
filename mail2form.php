@@ -5,6 +5,7 @@
     		$text = iconv($current_encoding, 'UTF-8', $text);
     		return $text;
 	}
+	
 
 	$path='/var/www/html/lomake/mails/'; // REMEMBER ENDING "/"
 	$cmd = 'cd ' . $path . ' && ls | tail -n 1';
@@ -28,8 +29,27 @@
 	//$lines = file($full_filename);
 	//print_r($lomake);
         $lines = $lomake;
+	
+	if(substr($lines[0],0,33) != "Below is the result of your form.") {
+	    print("<html><head><title>Lomake</title></head><body><h1>Virheellinen sähköposti vastaanotettu:</h1>");
+	    
+	    print('<div style="border-style=solid; border-color: black; border-width: 3px; border-radius: 10px; width: 500px; background-color: cyan; padding: 20px;">
+		<form action="data2tiger.php" method="post">
+    		<p>Toiminto: Voit joko poistaa hakemuksen, tai poimia sisällön talteen manuaalisesti.</p>
+		<input type="hidden" name="fname" value="' . $full_filename . '">
+		<input name="remove" value="Poista hakemus" type="submit">
+		</form></div>');
 
+	    print('<br>Sähköpostin rajattu sisältö:<br>');
 
+	    
+	    print(str_replace("<","&lt;", str_replace(">","&gt;", str_replace("\"", "''", implode($lines, "<br>\n")))));
+	    print("</body></html>");
+	    
+	    die();
+	}
+	
+	
 	foreach ($lines as $line_num => $line) {
 		//$line = correct_encoding($line);
 		$line = trim($line);
@@ -496,7 +516,6 @@
 	
 	<form action="data2tiger.php" method="post">
 	
-	<input type="hidden" name="fname" value="' . $full_filename . '">
 	<input type="hidden" name="full_form" value="' . implode($lines,"\n") . '">
 	<div style="border-style: solid; border-width: 1px; width: 600px; background-color: #ccffcc">
 	
