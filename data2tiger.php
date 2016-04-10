@@ -18,33 +18,35 @@ function r($text) {
 if(isset($_POST['add'])) {
 
     include('HTTP/Client.php');
-    include('Zend/Json.php');
+    include('Zend/Json/Json.php');
 
-    $endpointUrl = "http://vtiger.intra/vtigerCRM/webservice.php";
+    $endpointUrl = "http://vtiger.intra.alrekry.fi/vtiger/webservice.php";
     $userName="admin";
     $userAccessKey = 'QrVFFXtdhgHEQFI';
 
     $httpc = new HTTP_Client();
     $httpc->get("$endpointUrl?operation=getchallenge&username=$userName");
     $response = $httpc->currentResponse();
-    $jsonResponse = Zend_JSON::decode($response['body']);
+    $jsonResponse = Zend\Json\Json::decode($response['body']);
+    print_r($jsonResponse);
+    if($jsonResponse->success==false) 
+	die('getchallenge failed:'.$jsonResponse->error->errorMsg);
 
-    if($jsonResponse['success']==false) 
-	die('getchallenge failed:'.$jsonResponse['error']['errorMsg']);
-
-    $challengeToken = $jsonResponse['result']['token'];
+    $challengeToken = $jsonResponse->result->token;
     $generatedKey = md5($challengeToken.$userAccessKey);
     $httpc->post("$endpointUrl", 
 		 array('operation'=>'login', 'username'=>$userName, 
     	               'accessKey'=>$generatedKey), true);
     $response = $httpc->currentResponse();
-    $jsonResponse = Zend_JSON::decode($response['body']);
+    $jsonResponse = Zend\Json\Json::decode($response['body']);
+    print_r("a");
+    print_r($jsonResponse);
+    print_r("b");
+    if($jsonResponse->success == false)
+	die('login failed:'.$jsonResponse->error->errorMsg);
 
-    if($jsonResponse['success']==false)
-	die('login failed:'.$jsonResponse['error']['errorMsg']);
-
-    $sessionId = $jsonResponse['result']['sessionName']; 
-    $userId = $jsonResponse['result']['userId'];
+    $sessionId = $jsonResponse->result->sessionName; 
+    $userId = $jsonResponse->result->userId;
 
     if(trim($_POST['PUHELIN']) != "" && trim($_POST['MATKAPUHELIN']) != "") {
 	$puhelin = trim($_POST['PUHELIN']) . ", " . trim($_POST['MATKAPUHELIN']);
@@ -74,7 +76,7 @@ if(isset($_POST['add'])) {
 			'cf_543'=>r($_POST['HUOMIOT']),
 			'assigned_user_id'=>'18x1' // ModuleID x UserID "'Users'x'admin'"
 			);
-    $objectJson = Zend_JSON::encode($contactData);
+    $objectJson = Zend\Json\Json::encode($contactData);
     $moduleName = 'Products';
 
     $params = array("sessionName"=>$sessionId, "operation"=>'create', 
@@ -82,12 +84,13 @@ if(isset($_POST['add'])) {
 //    print_r($params);
     $httpc->post("$endpointUrl", $params, true);
     $response = $httpc->currentResponse();
-    $jsonResponse = Zend_JSON::decode($response['body']);
+    print_r($response);
+    $jsonResponse = Zend\Json\Json::decode($response['body']);
 
-    if($jsonResponse['success']==false)
-	die('create failed: '.$jsonResponse['error']['message']);
-    $savedObject = $jsonResponse['result']; 
-    $id = $savedObject['id'];
+    if($jsonResponse->success==false)
+	die('create failed: '.$jsonResponse->error->message);
+    $savedObject = $jsonResponse->result; 
+    $id = $savedObject->id;
 
     echo "Lisätty: " . $nimi . ".\n\n";
     $cmd = "mv " . $_POST['fname'] . " " . "/var/www/html/lomake/accepted 2>&1";
