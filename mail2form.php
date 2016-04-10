@@ -7,7 +7,7 @@
 	}
 	
 
-	$path='/var/www/html/lomake/mails/'; // REMEMBER ENDING "/"
+	$path='/var/www/html/lomakkeet/mails/'; // REMEMBER ENDING "/"
 	$cmd = 'cd ' . $path . ' && ls | tail -n 1';
 	$file = shell_exec($cmd);
 	$full_filename = $path.$file; 
