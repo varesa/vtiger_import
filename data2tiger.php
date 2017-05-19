@@ -20,7 +20,7 @@ if(isset($_POST['add'])) {
     include('HTTP/Client.php');
     include('Zend/Json/Json.php');
 
-    $endpointUrl = "http://vtiger.intra.alrekry.fi/vtiger/webservice.php";
+    $endpointUrl = "https://vtiger.intra.alrekry.fi/vtiger/webservice.php";
     $userName="admin";
     $userAccessKey = 'QrVFFXtdhgHEQFI';
 
@@ -28,7 +28,7 @@ if(isset($_POST['add'])) {
     $httpc->get("$endpointUrl?operation=getchallenge&username=$userName");
     $response = $httpc->currentResponse();
     $jsonResponse = Zend\Json\Json::decode($response['body']);
-    print_r($jsonResponse);
+    //print_r($jsonResponse);
     if($jsonResponse->success==false) 
 	die('getchallenge failed:'.$jsonResponse->error->errorMsg);
 
@@ -39,9 +39,9 @@ if(isset($_POST['add'])) {
     	               'accessKey'=>$generatedKey), true);
     $response = $httpc->currentResponse();
     $jsonResponse = Zend\Json\Json::decode($response['body']);
-    print_r("a");
-    print_r($jsonResponse);
-    print_r("b");
+    //print_r("a");
+    //print_r($jsonResponse);
+    //print_r("b");
     if($jsonResponse->success == false)
 	die('login failed:'.$jsonResponse->error->errorMsg);
 
@@ -93,13 +93,13 @@ if(isset($_POST['add'])) {
     $id = $savedObject->id;
 
     echo "Lisätty: " . $nimi . ".\n\n";
-    $cmd = "mv " . $_POST['fname'] . " " . "/var/www/html/lomake/accepted 2>&1";
+    $cmd = "mv " . $_POST['fname'] . " " . "/var/www/html/lomakkeet/accepted 2>&1";
     exec($cmd,$pal);
     //print_r($pal);
     
 } else if(isset($_POST['remove'])) {
     echo "Poistettu.";
-    $cmd = "mv " . $_POST['fname'] . " " . "/var/www/html/lomake/rejected";
+    $cmd = "mv " . $_POST['fname'] . " " . "/var/www/html/lomakkeet/rejected";
     shell_exec($cmd);
 } else {
     echo "Jotain outoa tapahtui.";
