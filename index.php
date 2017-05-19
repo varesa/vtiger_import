@@ -11,7 +11,7 @@
 	    <input type="submit" value="Katsele, ja käsittele lomakkeita">
 	</form>
 	
-	<form action="../vtigerCRM/index.php" method="GET">
+	<form action="/vtiger" method="GET">
 	    <input type="submit" value="vTiger">
 	</form>
 	
